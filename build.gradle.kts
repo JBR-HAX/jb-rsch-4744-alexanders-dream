@@ -17,6 +17,9 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("javax.persistence:javax.persistence-api:2.2")
+    runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.testcontainers:junit-jupiter")
     //add dependencies as needed
@@ -25,3 +28,5 @@ dependencies {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+
